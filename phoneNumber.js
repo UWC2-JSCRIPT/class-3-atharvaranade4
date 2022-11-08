@@ -39,8 +39,8 @@ const parsePhoneNumber = (stringNumber) =>{
 
     //phoneNumber - combine 3-digit and 4-digit regex
     //Replace '-' with ''
-    const phoneNumber = /\d{3}[-]\d{4}$/.exec(stringNumber)[0].replace('-', '')     
-
+    const phoneNumber = /\d{3}[-]\d{4}$/.exec(stringNumber)[0].replace('-', '')
+    
     return {areaCode, phoneNumber}
 }
 

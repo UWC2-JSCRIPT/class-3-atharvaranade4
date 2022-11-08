@@ -10,7 +10,7 @@ const logReceipt = function(...menuItems){
 
   menuItems.forEach((menuItem)=>{
     // Log each item to console
-    console.log(`${menuItem.descr}: ${menuItem.price}`)
+    console.log(`${menuItem.descr} - $${menuItem.price}`)
 
     // Total price without tax
     totalPrice += menuItem.price
@@ -19,8 +19,8 @@ const logReceipt = function(...menuItems){
     taxedPrice = (totalPrice*TAX) + totalPrice
   })
 
-  console.log(`Subtotal without tax:`, totalPrice.toFixed(2))
-  console.log(`Subtotal with tax:`, taxedPrice.toFixed(2))
+  console.log(`Subtotal without tax - $${totalPrice.toFixed(2)}`)
+  console.log(`Subtotal with tax - $${taxedPrice.toFixed(2)}`)
 }
 
 

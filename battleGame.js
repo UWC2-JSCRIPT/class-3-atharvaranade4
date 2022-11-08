@@ -37,9 +37,6 @@ return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} 
 
 
 
-
-
-
 // DO NOT MODIFY THE CODE BELOW THIS LINE
 // Set attacker and defender.  Reverse roles each iteration
 let attackOrder = [player1, player2];
