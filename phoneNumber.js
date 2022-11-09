@@ -17,6 +17,8 @@
 // [-\s]  one of a space or a dash
 // \d{4}  exactly 4 digit characters
 // $      end of line
+const testPhoneNumber = (phoneNumber) => /^\(\d{3}\)[-\s]\d{3}[-\s]\d{4}$/.test(phoneNumber);
+
 
 // check testPhoneNumber
 console.log(testPhoneNumber('(206) 333-4444')); // should return true
@@ -30,6 +32,17 @@ console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a
 // the phone number.
 // Returns an object in the format {areaCode, phoneNumber}
 
+const parsePhoneNumber = (stringNumber) =>{
+       
+    // Area code
+    const areaCode = /\d{3}/.exec(stringNumber)[0]
+
+    //phoneNumber - combine 3-digit and 4-digit regex
+    //Replace '-' with ''
+    const phoneNumber = /\d{3}[-]\d{4}$/.exec(stringNumber)[0].replace('-', '')
+    
+    return {areaCode, phoneNumber}
+}
 
 
 // Check parsePhoneNumber
